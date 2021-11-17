@@ -1,15 +1,17 @@
 import React, { useState, useEffect } from "react";
 import Form from "./components/Form";
-import dataku from "./data/dropdowndata";
+// import dataku from "./data/dropdowndata";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import Cliniclist from "./components/Card";
+import "./index.css";
 
 function App() {
   const [options, setOptions] = useState({});
   const [data, setData] = useState({});
 
-  useEffect(() => {
-    dataku({ setOptions });
-  }, []);
+  // useEffect(() => {
+  //   dataku({ setOptions });
+  // }, []);
 
   return (
     <div className="App">
@@ -23,7 +25,9 @@ function App() {
             </button>
           </div>
         </div>
-        <div className="right-side"></div>
+        <div className="right-side">
+          <Cliniclist></Cliniclist>
+        </div>
       </BrowserRouter>
     </div>
   );
