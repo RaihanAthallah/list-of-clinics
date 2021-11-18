@@ -1,4 +1,4 @@
-const apiEndpoint = "http://103.214.112.202:8080/doctor";
+const apiEndpoint = "http://103.214.112.202:8080/clinics";
 
 function getApi({ setOptions }) {
   let coba = "";

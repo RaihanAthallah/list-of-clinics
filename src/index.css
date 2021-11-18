@@ -3,6 +3,9 @@
 @tailwind utilities;
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700&family=Shippori+Antique+B1&display=swap");
 
+html {
+  scroll-behavior: smooth;
+}
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
@@ -14,15 +17,27 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
+.cliniclist {
+  font-family: "Lato", sans-serif;
+}
 
-.App {
+.right-side .cardbtn:hover {
+  background-color: #4004a0;
+  transition: 0.5s;
+}
+.right-side .cardbtn {
+  background-color: #6109f0;
+}
+
+/* ### CSS STYLE IF TRANSLATED FROM TAILDWIND
+ .App {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
 }
 
 .left-side {
-  height: 1080px; /* bffore 90vh */
+  height: 1080px;
   width: 350px;
   padding-left: 30px;
   padding-right: 30px;
@@ -61,60 +76,57 @@ code {
     width: 100%;
     height: 200px;
   }
-}
+} 
 
-/* STYLE CARD COMPONENT */
-.right-side {
+ STYLE CARD COMPONENT 
+ .right-side {
   padding: 4rem 4rem 4rem 4rem;
-}
+} 
 
 .cliniclist {
   font-family: "Lato", sans-serif;
-  width: 90vw;
-  max-width: 1170px;
-  /* margin: 5rem auto;
-  margin: 3rem 4rem 3rem 4rem; */
-  display: grid;
-  gap: 2rem;
+   width: 90vw; 
+   max-width: 1170px; 
+   margin: 10rem auto; 
+   display: grid;
+  gap: 2rem; 
 }
-/* @media screen and (min-width: 1500px) {
-  .cliniclist {
-    grid-template-columns: repeat(2, 1fr);
-  }
-} */
 
-@media screen and (min-width: 900px) {
+ @media screen and (min-width: 900px) {
   .right-side .cliniclist {
     grid-template-columns: repeat(3, 1fr);
   }
-}
+} 
 
-.clinic {
-  display: block;
+ .clinic {
+  display: block; 
   background: #fff;
   border-radius: 14px;
-}
-.clinic img {
+  transition: 1s;
+} 
+ .clinic:hover {
+  transform: scale(1.05);
+} 
+
+ .clinic img {
   border-radius: 14px 14px 0 0;
   max-height: 200px;
   width: 100%;
-}
+} 
 .clinic h4 {
   color: #617d98;
   font-size: 0.75rem;
-}
-.right-side .addition {
+} 
+ .right-side .addition {
   padding: 1rem 2rem;
-}
-.right-side .cardbtn:hover {
-  background-color: rgb(71, 135, 231);
-  transition: 0.5s;
-}
+} 
+
 .right-side .cardbtn {
   width: 120px;
-  color: #fff;
-  margin-left: 2rem;
-  margin-bottom: 0.25rem;
+  color: #fff; 
+   margin-left: 2rem;
+  margin-bottom: 0.5rem; 
   background-color: #6109f0;
 }
+
 /* END OF CARD STYLE */
